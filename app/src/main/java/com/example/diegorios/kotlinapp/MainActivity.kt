@@ -32,8 +32,10 @@ class MainActivity : AppCompatActivity() {
         val showString = findViewById<TextView>(R.id.textView2)
         val stringValue = showString.text.toString()
         var word = stringValue
-        word += " "
-        showString.text = word
+        if(word.length > 0){
+            word += " "
+            showString.text = word
+        }
     }
 
     fun deleteChar(view: View){
