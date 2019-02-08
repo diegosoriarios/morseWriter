@@ -35,4 +35,12 @@ class MainActivity : AppCompatActivity() {
         word += " "
         showString.text = word
     }
+
+    fun deleteChar(view: View){
+        val showString = findViewById<TextView>(R.id.textView2)
+        val stringValue = showString.text.toString()
+        var word = stringValue
+        word = word.substring(0, (word.length - 1))
+        showString.text = word
+    }
 }
