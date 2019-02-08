@@ -40,7 +40,9 @@ class MainActivity : AppCompatActivity() {
         val showString = findViewById<TextView>(R.id.textView2)
         val stringValue = showString.text.toString()
         var word = stringValue
-        word = word.substring(0, (word.length - 1))
-        showString.text = word
+        if(word.length > 0){
+            word = word.substring(0, (word.length - 1))
+            showString.text = word
+        }
     }
 }
